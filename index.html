@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Refund Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+    <header>
+      <h1>🧾 Refund Calculator</h1>
+      <p>Work out exactly what a customer is owed</p>
+    </header>
+
+    <div class="body">
+      <div class="section-label">ORDER DETAILS</div>
+
+      <div class="field">
+        <div class="field-top">
+          <label for="packSize">Pack Size</label>
+          <span class="hint">units per pack</span>
+        </div>
+        <input id="packSize" type="text" inputmode="numeric" autocomplete="off">
+      </div>
+
+      <div class="field">
+        <div class="field-top">
+          <label for="refundQty">Refund Quantity</label>
+          <span class="hint">units to refund</span>
+        </div>
+        <input id="refundQty" type="text" inputmode="numeric" autocomplete="off">
+      </div>
+
+      <div class="field">
+        <div class="field-top">
+          <label for="packPrice">Pack Price</label>
+          <span class="hint">$ per pack</span>
+        </div>
+        <input id="packPrice" type="text" inputmode="decimal" autocomplete="off">
+      </div>
+
+      <div class="row-2">
+        <div class="field">
+          <div class="field-top">
+            <label for="taxRate">Tax Rate</label>
+            <span class="hint">%</span>
+          </div>
+          <input id="taxRate" type="text" inputmode="decimal" autocomplete="off">
+        </div>
+        <div class="field">
+          <div class="field-top">
+            <label for="discountRate">Discount Rate</label>
+            <span class="hint">%</span>
+          </div>
+          <input id="discountRate" type="text" inputmode="decimal" autocomplete="off">
+        </div>
+      </div>
+
+      <div class="error-banner" id="errorBanner">
+        <span>⚠</span>
+        <span id="errorText"></span>
+      </div>
+
+      <div class="btn-row">
+        <button id="calcBtn">Calculate Refund</button>
+        <button id="clearBtn">Clear</button>
+      </div>
+
+      <div class="result-card">
+        <div class="result-row">
+          <span class="label">Base Refund</span>
+          <span class="value" id="baseVal">—</span>
+        </div>
+        <div class="result-row">
+          <span class="label">After Tax</span>
+          <span class="value" id="taxVal">—</span>
+        </div>
+        <hr class="sep">
+        <div class="total-wrap">
+          <div class="total-label">TOTAL REFUND</div>
+          <div class="total-value" id="totalVal">—</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
